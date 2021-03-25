@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import goodpage from '../views/goodpage.vue'
+import storepage from '../views/storepage.vue'
 
 const routes = [
   {
@@ -16,7 +18,17 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
-  }
+  },
+  {
+    path: '/goodpage',
+    name: 'goodpage',
+    component: goodpage
+  },
+  {
+    path: '/storepage',
+    name: 'storepage',
+    component: storepage
+  },
 ]
 
 const router = createRouter({
